@@ -5,16 +5,26 @@ Este documento descreve o desenvolvimento de um sistema estabilizador de câmera
 A ideia básica do projeto é construir a estrutura do estabilizador e, posteriormente, testá-la em câmeras diversas: de celular, semi-profissionais e profissionais.
 
 \section{Motivação}
-A cultura \textit{maker} consiste em ...\textsuperscript{\cite{cultura_maker}}
+A cultura \textit{maker} consiste em permitir que uma pessoa comum possa fabricar seus próprios objetos. A lógica da cultura \textit{maker} é justamente contrária à industrial, uma vez que, em vez fabricar produtos uniformes, em escala, em uma linha de produção, a fabricação torna-se personalizada e feita pelo próprio usuário\cite{cultura_maker}.
 
+Levando essa filosofia em conta, este trabalho procura definir um produto que concilia a visão industrial e a cultura \textit{maker}, uma vez que poderá ser produzido em escala, mas as subpartes do objeto final podem ser facilmente achadas por pessoas comuns.
+
+O produto que se quer descrever já existe comercialmente, é um estabilizador Gimbal.
  
 \section{Objetivo}
 
+O objetivo principal desse trabalho é desenvolver uma prova de conceito um sistema de estabilização de uma câmera por gimbal. Provendo tanto o software quanto o hardware necessário que outras pessoas possam construí-lo.
 
+Dessa maneira, o sistema deve ser uma base para que outros sistemas de desenvolvimento maker possam ser construidos, um gimbal por exemplo tem vários como orientação de câmeras e sensores, ajustes de equipamentos.
 
 
 \section{Justificativa}
 
+O projeto será uma base para futuras expansões, em que outras pessoas podem usas seus conceitos para não só construí-lo, como criar novas soluções através dele. 
+
+O RocketyPy, pode ser citado como um exemplo que esse projeto busca emular, criado por alunos da Escola Politécnica, como uma ferramenta interna do Projeto Jupiter, a biblioteca Python se tornou o estado da arte para sistemas de previsão de trajetória dentro do ambiente de foguete-modelismo e é a base ou um recurso vital para diversos novos sistemas.
+
+O estado da arte não só já conta com sistemas comerciais caros, em 2017 a equipe OHM da universidade tecnicas da dinamarca desenvolveu um sistema open-source o OpenSAM, mas esse projeto usa um microcontrolador comercial SimpleBGC de 8 bits, feito para estabilização. 
 
 \section{Organização do trabalho}
 Os próximos capítulos explicitarão como o trabalho foi planejado a partir de seus requisitos e das tecnologias envolvidas.

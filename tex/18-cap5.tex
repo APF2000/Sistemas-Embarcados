@@ -12,6 +12,9 @@ Memória programável já dentro do sistema (alguns ATs não têm)
 Não é caro (maior parte do custo será nos componentes mecânicos)
 Consumo de energia baixo (22mW) em relação à potência proposta (de 1W)
 
+\subsubsection{Análise}
+
+
 \subsection{Sistema Operacional}
 Como o projeto requer controle em tempo real da câmera, é necessário usar um RTOS (real time operating system).
 Entre os SOs apresentados, o mais adequado para o controlador Gimbal é o ARM OS.
@@ -36,6 +39,20 @@ QEMU → SO
 LEDs → hardware 
 
 \section{Projeto e implementação}
+
+\subsection{Design}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth,angle=0]{figures/Design.png}
+    \caption{Design básico do projeto}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth,angle=0]{figures/Design-Page-2.png}
+    \caption{Design básico do interior do projeto}
+\end{figure}
 
 \section{Testes e avaliação}
 
