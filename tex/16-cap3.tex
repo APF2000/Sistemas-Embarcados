@@ -2,19 +2,38 @@
 \label{CAP3}
 
 
-Esta seção trata das fases do trabalho: como deverão ser executadas e em que sequência.
+Esta seção trata das fases do trabalho: como devem ser executadas e em que sequência.
+
+\section{Teste dos motores e acelerômetros}
+Verificar em apenas uma dimensão como os sensores (acelerômetros) capturam a informação de movimento e como os motores conseguem responder de volta.
+
+Esta parte do projeto envolve integrar motores, acelerômetros e o sistema operacional, uma vez que a parte de tempo real será bastante explorada, isto é, a cada variação detectada pelos sensores, os motores deverão serem capazes de criarem um movimento contrário que reestabeleça a posição anterior.
+
+Assim que for possível estabilizar um fio, por exemplo, em uma dimensão, pode-se adicionar as outras duas dimensões para que o controle seja completo e restrinja todos os graus de liberdade disponíveis para giro da câmera.
+
+Usando a placa ATMEGA, esta fase deverá terminar com o comportamento do sistema já programado e testado fisicamente, para que possa simplesmente ser montado na fase seguinte.
+
+\section{Montagem da estrutura}
+Uma estrutura cilíndrica deve ser usada para abrigar o equipamento. Ela pode ser criada em uma impressora 3D ou com outros objetos cilíndricos, com um espaço vazio interno de 1cm de diâmetro, por onde alguns fios devem passar.
+
+A lateral do cilindro deverá ser cortada para abrigar os botões de ajuste e os LEDs de \textit{status}.
+
+O corte deverá acompanhar verticalmente a lateral do cilindro e ficar perto de uma das pontas dele, para que o circuito possa controlar os motores de estabilização.
+
+Serão necessários aproximadamente 5cm verticalmente, além de uma circunferência de até meia volta acompanhando a superfície do cilindro, para que o corte seja ideal.
+
+Após os cortes, é preciso conectar os botões aos fios e pinos correspondentes e encaixá-los no corte feito.
+
+Por último, o motor de passo que gira na direção do eixo principal do cilindro deve ser ligado aos fios, assim como a subestrutura que segura a câmera e os outros dois motores, os quais agirão em uma plano perpendicular ao eixo do outro motor. 
+
+A figura \ref{fig:design_basico} ilustra melhor como o passo a passo descrito acima pode ser feito. 
 
 
-\section{Montar a estrutura}\label
+\section{Teste de integração}
+Após a junção das partes do projeto, deve-se testar se o sistema como um todo funciona de fato.
 
+Neste momento, a estrutura montada anteriormente será testada com pequenas vibrações junto a uma câmera. 
 
-Linha Zhiyun Smooth só serve para celulares, o nosso estabilizador servirá para câmeras semi-profissionais  também
-Por serem feitos para câmeras profissionais, precisam de mais robustez, por isso, custam mais caro:
-Linha Gimbal DJI RS
-Valor acima de 2500 reais
-Linha S Leeremi
-Valor acima de 1000 reais
+Alguns caminhos de teste deverão ser definidos para validar se os estabilizadores estão cumprindo seu papel, por exemplo, o cilindro principal do produto pode ficar suspenso por um fio preso a um teto e em seguida deve-se balançar levemente esse fio e verificar se as imagens ou filmagens geradas pela câmera ficaram embaçadas ou não.
 
-
-\section{Montar a estrutura 2}\label
-
+Evidentemente que o resultado esperado é que o \textit{motion blur} seja o mínimo possível, além de ter que ser desprezível em comparação com o caso sem atuador algum, que deve ser o caso de controle, de onde o grupo poderá ter uma base para saber se precisa ainda calibrar algo.

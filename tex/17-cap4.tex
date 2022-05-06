@@ -1,48 +1,81 @@
 \chapter{Especificação de requisitos}
-
 \label{CAP4}
-
-\section{Requisitos funcionais}
 
 Neste capítulo serão descritas as necessidades básicas levantadas para que o projeto funcione como esperado.
 
-Os requisitos inicialmente propostos foram os seguintes
+\section{Requisitos funcionais}
 
 
-\begin{table}[H]
-\caption{}
-\label{tab:requisitos}
-\begin{tabular}{|c|c|}
-\hline
-{ \textbf{Propósito}}       & { Estabilizar uma câmera em 3 eixos}                                                                       \\ \hline
-{ \textbf{Entradas}}        & { \begin{tabular}[c]{@{}c@{}}Botão de energia, botão de trava,\\ acelerômetro e giroscópio\end{tabular}} \\ \hline
-{ \textbf{Saídas}}          & { 3 motores de passo}                                                                                      \\ \hline
-{ \textbf{Funções}}         & { Estabilizar uma câmera em tempo real}                                                                    \\ \hline
-{ \textbf{Performance}}     & { Ajusta a posição a cada 10ms}                                                                            \\ \hline
-{ \textbf{Custo}}           & { R\$250,00}                                                                                               \\ \hline
-{ \textbf{Potência}}        & { 1W}                                                                                                      \\ \hline
-{ \textbf{Tamanho e massa}} & { Até 200g, aproximadamente 30cm x 5cm x 5cm}                                                              \\ \hline
-\end{tabular}
-\end{table}
+A tabela de requisitos inicial do projeto pode ser vista na tabela \ref{tab:req_ini}.
 
-Ao longo do desenvolvimento diversos requisitos foram alterados para melhor enquadrarem os objetivos de longo prazo do projeto: 
-\begin{table}[H]
-\caption{}
-\label{tab:requisitos}
-\begin{tabular}{|c|c|}
-\hline
-{ \textbf{Propósito}}       & { Estabilizar uma câmera em 3 eixos}                                                                       \\ \hline
-{ \textbf{Entradas}}        & { \begin{tabular}[c]{@{}c@{}}Botão de energia, botão de trava,\\ acelerômetro e giroscópio\end{tabular}} \\ \hline
-{ \textbf{Saídas}}          & { 3 motores de passo, 4 leds}                                                                                      \\ \hline
-{ \textbf{Funções}}         & { Estabilizar uma câmera na taxe de quadros da camera}                                                                    \\ \hline
-{ \textbf{Performance}}     & { Ajusta a posição a cada 16,6ms}                                                                            \\ \hline
-{ \textbf{Custo}}           & { R\$350,00}                                                                                               \\ \hline
-{ \textbf{Corrente}}        & { ~16W}                                                                                                     \\ \hline
-{ \textbf{Tamanho e massa}} & { Até 500g, aproximadamente 30cm x 5cm x 5cm}                                                              \\ \hline
-\end{tabular}
-\end{table}
+    \begin{table}[H]
+        \caption{Tabela inicial de requisitos funcionais.}
+        \label{tab:req_ini}
+        \begin{tabular}{|c|c|}
+        \hline
+        { \textbf{Propósito}}       & { Estabilizar uma câmera em 3 eixos}                                                                       \\ \hline
+        { \textbf{Entradas}}        & { \begin{tabular}[c]{@{}c@{}}Botão de energia, botão de trava,\\ acelerômetro e giroscópio\end{tabular}} \\ \hline
+        { \textbf{Saídas}}          & { 3 motores de passo}                                                                                      \\ \hline
+        { \textbf{Funções}}         & { Estabilizar uma câmera em tempo real}                                                                    \\ \hline
+        { \textbf{Performance}}     & { Ajusta a posição a cada 10ms}                                                                            \\ \hline
+        { \textbf{Custo}}           & { R\$250,00}                                                                                               \\ \hline
+        { \textbf{Potência}}        & { 1W}                                                                                                      \\ \hline
+        { \textbf{Tamanho e massa}} & { Até 200g, aproximadamente 30cm x 5cm x 5cm}                                                              \\ \hline
+        \end{tabular}
+    \end{table}
+        
+Ao longo do desenvolvimento diversos requisitos foram alterados para melhor enquadrarem os objetivos de longo prazo do projeto, conforme pode ser visto na tabela \ref{tab:req_fin}.
+
+    \begin{table}[H]
+        \caption{Tabela final de requisitos funcionais.}
+        \label{tab:req_fin}
+        \begin{tabular}{|c|c|}
+        \hline
+        { \textbf{Propósito}}       & { Estabilizar uma câmera em 3 eixos}                                                                       \\ \hline
+        { \textbf{Entradas}}        & { \begin{tabular}[c]{@{}c@{}}Botão de energia, botão de trava,\\ acelerômetro e giroscópio\end{tabular}} \\ \hline
+        { \textbf{Saídas}}          & { 3 motores de passo, 4 leds}                                                                                      \\ \hline
+        { \textbf{Funções}}         & { Estabilizar uma câmera na taxe de quadros da camera}                                                                    \\ \hline
+        { \textbf{Performance}}     & { Ajusta a posição a cada 16,6ms}                                                                            \\ \hline
+        { \textbf{Custo}}           & { R\$350,00}                                                                                               \\ \hline
+        { \textbf{Corrente}}        & { ~16W}                                                                                                     \\ \hline
+        { \textbf{Tamanho e massa}} & { Até 500g, aproximadamente 30cm x 5cm x 5cm}                                                              \\ \hline
+        \end{tabular}
+    \end{table}
 
 
 \section{Requisitos não-funcionais}
+
+A seguir são descritos alguns dos requisitos que não são necessários para que o projeto funcione, mas são absolutamente necessários para a aceitação dos \textit{stakeholders}, ou seja, todas as partes envolvidas, incluindo os usuários do produto, os desenvolvedores e as empresas vendedoras.
+
+\begin{itemize}
+    \item \textbf{Preço baixo}
+        
+    Os produtos comerciais de Gimbal, por serem feitos para câmeras profissionais, precisam de mais robustez, por isso, custam mais caro: a linha Gimbal DJI custa acima de R\$2500,00 e a linha S Leeremi acima de R\$1000,00.
+        
+    O projeto precisa custar consideravelmente menos para que, mesmo após a incidência de impostos e taxas de transporte, o estabilizador tenha preço mais atrativo em relação aos concorrentes.
+        
+    \item \textbf{Versatilidade}
+    
+    Este estabilizador servirá para câmeras semi-profissionais, profissionais e também para celulares.
+    
+    Diferente de linhas como a Zhiyun Smooth, que só servem para celulares, o trabalho procura atender vários tipos de públicos.
+    
+    
+    \item \textbf{Equivalência de captura de imagem}
+    
+    As imagens geradas usando o estabilizador descrito neste documento devem ter a mesma qualidade das produzidas usando os produtos já disponíveis no mercado.
+    
+    Isto é extremamente importante para que o projeto seja visto pela sociedade como um produto substituto, e não um de menor qualidade.
+    
+    
+    \item \textbf{Robustez}
+    
+    Assim como o item anterior, a confiança do consumidor sobre o produto deverá ocorrer graças à qualidade oferecida, mesmo com preço mais baixo.
+    
+    Dessa forma, é preciso que os materiais usados no estabilizador não quebrem facilmente. A estrutura deve resistir aos choques mecânicos mais comuns, uma vez que, manipulada por seres humanos, sempre pode cair no chão.
+\end{itemize}
+
+
+
 
 

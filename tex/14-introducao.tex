@@ -1,30 +1,30 @@
 \chapter{Introdução}\label{CAP:introducao}
 
-Este documento descreve o desenvolvimento de um sistema estabilizador de câmeras que segue o mesmo princípio dos atuais estabilizadores Gimbal.
+\section{Motivação e Contexto}
+A cultura \textit{maker} assemelha-se, e possivelmente se originou da tendência de artesanato DIY(\textit{Do-It-Yourself}), a qual permite que uma pessoa comum possa fabricar seus próprios objetos. A lógica é contrária à industrial, uma vez que, em vez de produtos uniformes, o processo resulta em objetos personalizados.\cite{cultura_maker}.
 
-A ideia básica do projeto é construir a estrutura do estabilizador e, posteriormente, testá-la em câmeras diversas: de celular, semi-profissionais e profissionais.
+Os \textit{makers} como existem hoje surgiram recentemente, assim que houve a ampliação do acesso a ferramentas como impressoras 3D e cortadoras a laser, assim como canais de comunicação para compartilhar conhecimento sobre operá-las. Do mesmo modo, a popularização de plataformas de prototipagem como o Arduino e ESP32 os tornou parte integral deste movimento.
 
-\section{Motivação}
-A cultura \textit{maker} consiste em permitir que uma pessoa comum possa fabricar seus próprios objetos. A lógica da cultura \textit{maker} é justamente contrária à industrial, uma vez que, em vez fabricar produtos uniformes, em escala, em uma linha de produção, a fabricação torna-se personalizada e feita pelo próprio usuário\cite{cultura_maker}.
+Vários exemplos da cultura \textit{maker} podem ser encontrados no \textit{YouTube}, e um exemplo bastante famoso é o Manual do Mundo\cite{manual_do_mundo}, no quadro Manual Maker\cite{manual_maker}. Ele é, inclusive, uma das maiores inspirações para este trabalho.
 
-Levando essa filosofia em conta, este trabalho procura definir um produto que concilia a visão industrial e a cultura \textit{maker}, uma vez que poderá ser produzido em escala, mas as subpartes do objeto final podem ser facilmente achadas por pessoas comuns.
+Levando essa filosofia em conta, este trabalho procura definir um produto que concilia a visão industrial e a \textit{maker}, uma vez que poderá ser produzido em escala, mas as subpartes do objeto final podem ser facilmente achadas por pessoas comuns.
 
-O produto que se quer descrever já existe comercialmente, é um estabilizador Gimbal.
+O produto que se quer descrever já existe comercialmente, é um estabilizador Gimbal. O problema do que é vendido é o fato de não ser acessível para o grande público, isto é, o público-alvo desse produto são fotógrafos profissionais. Este trabalho procura, portanto, expandir o mercado já existente.
  
 \section{Objetivo}
 
-O objetivo principal desse trabalho é desenvolver uma prova de conceito um sistema de estabilização de uma câmera por gimbal. Provendo tanto o software quanto o hardware necessário que outras pessoas possam construí-lo.
+O objetivo principal desse trabalho é desenvolver uma prova de conceito sobre um sistema de estabilização de câmeras. Provendo tanto o \textit{software} quanto o \textit{hardware} necessários para que outras pessoas possam construí-lo.
 
-Dessa maneira, o sistema deve ser uma base para que outros sistemas de desenvolvimento maker possam ser construidos, um gimbal por exemplo tem vários como orientação de câmeras e sensores, ajustes de equipamentos.
+Dessa maneira, o sistema deve ser uma base para que outros sistemas de desenvolvimento \textit{maker} possam ser construídos. Um Gimbal, por exemplo, poderia dar origem a vários outros projetos, como orientação de sensores e ajuste de equipamentos.
 
 
 \section{Justificativa}
 
-O projeto será uma base para futuras expansões, em que outras pessoas podem usas seus conceitos para não só construí-lo, como criar novas soluções através dele. 
+O projeto será uma base para futuras expansões, em que outras pessoas podem usar seus conceitos para não só construí-lo, como criar novas soluções através dele. 
 
-O RocketyPy, pode ser citado como um exemplo que esse projeto busca emular, criado por alunos da Escola Politécnica, como uma ferramenta interna do Projeto Jupiter, a biblioteca Python se tornou o estado da arte para sistemas de previsão de trajetória dentro do ambiente de foguete-modelismo e é a base ou um recurso vital para diversos novos sistemas.
+O RocketPy\cite{RocketPy} pode ser citado como um exemplo que este projeto busca emular; criado por alunos da Escola Politécnica, como uma ferramenta interna do Projeto Jupiter, essa biblioteca Python se tornou o estado da arte para sistemas de previsão de trajetória dentro do ambiente de foguete-modelismo e pode ser um recurso vital para diversos novos sistemas.
 
-O estado da arte não só já conta com sistemas comerciais caros, em 2017 a equipe OHM da universidade tecnicas da dinamarca desenvolveu um sistema open-source o OpenSAM, mas esse projeto usa um microcontrolador comercial SimpleBGC de 8 bits, feito para estabilização. 
+Os produtos mais atuais não incluem apenas sistemas comerciais caros, a iniciativa de código aberto tem expandido bastante. Em 2017, por exemplo, a equipe OHM da Universidade Técnica da Dinamarca desenvolveu um sistema \textit{open-source}, o OpenSAM, mas esse projeto usa um microcontrolador comercial SimpleBGC de 8 bits, feito para estabilização\cite{open_sam}. 
 
 \section{Organização do trabalho}
 Os próximos capítulos explicitarão como o trabalho foi planejado a partir de seus requisitos e das tecnologias envolvidas.
